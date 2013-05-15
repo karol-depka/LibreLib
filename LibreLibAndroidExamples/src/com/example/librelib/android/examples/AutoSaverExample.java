@@ -6,7 +6,7 @@ public class AutoSaverExample {
 	
 	private final AutoSaver autoSaver = new AutoSaver(2000) {
 		@Override public void saveCustom() {
-			// save/push somewhere into
+			// save/push/update somewhere
 		}
 	};
 	
