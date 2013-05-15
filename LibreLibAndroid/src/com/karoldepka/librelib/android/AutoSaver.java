@@ -4,11 +4,13 @@ import android.os.Handler;
 
 /**
  * Re-usable class for batched/delayed saves/updates.
- * Save occurs: at most {@link #delayMs} milliseconds after modification is reported (which is also the moment of timer restart).
+ * Save occurs: at most {@link #delayMs} milliseconds after modification is reported
+ * (which is also the moment of timer restart).
  * After save, the timer stops.
  * After a modification is reported, timer restarts.
  * If the timer is already running, it will not start again (will run its course to the end),
- * otherwise there would be a risk of never saving if the modifications were reported at certain big frequency.
+ * otherwise there would be a risk of never saving if the modifications were reported
+ * at certain big frequency.
  *
  * @author Karol Depka Pradzinski
  * @license LGPL
