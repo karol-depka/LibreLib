@@ -26,7 +26,7 @@ public abstract class AutoSaver {
 		this.delayMs = delayMs;
 	}
 
-	public abstract void saveCustom();
+	protected abstract void saveCustom();
 
 	public void documentModified() {
 		ensureSaveTimerRunning();
@@ -40,12 +40,14 @@ public abstract class AutoSaver {
 	}
 
 	public void saveNowIfNeeded() {
-		saveCustom();
-		stopSaveTimer();
+		// TODO: only save if modified
+		forceSaveNow();
 	}
 
+	/** Useful e.g. when shutting down the app*/
 	public void forceSaveNow() {
-		saveNowIfNeeded();
+		saveCustom();
+		stopSaveTimer();
 	}
 	
 	private void stopSaveTimer() {
