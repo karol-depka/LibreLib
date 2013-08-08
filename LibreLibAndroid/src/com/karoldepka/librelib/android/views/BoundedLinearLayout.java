@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 public class BoundedLinearLayout extends LinearLayout {
 
-	private final int mBoundedWidth = 300;
+	private final int mBoundedWidth = 500;
 
 //	private final int mBoundedHeight;
 
