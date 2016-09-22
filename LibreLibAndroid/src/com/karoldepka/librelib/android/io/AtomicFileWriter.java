@@ -5,7 +5,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/** Writes to a file in such a way to ensure that the previous contents
+/**
+ * Writes to a file in such a way to ensure that the previous contents
  * of the file will stay intact if the writing does not complete successfully.
  * 
  * Prevents a scenario in which the target file is left corrupted
